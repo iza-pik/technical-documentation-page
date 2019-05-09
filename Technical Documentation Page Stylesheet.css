@@ -1,0 +1,55 @@
+body {
+  font-family: Helvetica;
+  font-size: calc(8px + 2vmin);
+  background-color: rgb(217, 249, 252);
+  overflow-wrap: break-word;
+}
+
+header {
+  font-size: calc(6px + 2vmin);
+  font-weight: bold;
+  padding-top: 4vmin;
+}
+
+#navbar {
+  position: fixed;
+  float: left;
+  border: 2px solid teal;
+  background-color: rgb(167, 242, 222);
+  padding: 1vmin;
+  font-size: calc(10px + 2vmin);
+  max-width: 20%;
+}
+
+#navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 1vmin;
+}
+
+#navbar li a {
+  display: block;
+  width: 20vmax;
+  height: 100%;
+}
+
+main {
+  display: block;
+  max-width: 75%;
+  width: 70vmax;
+  float: right;
+}
+
+.code-example {
+  display: block;
+  background-color: rgb(167, 242, 222);
+}
+
+@media only screen and (orientation: landscape) {
+  body {
+    overflow-wrap: normal;
+  }
+  header {
+    font-size: calc(10px + 2vmin);
+  }
+}

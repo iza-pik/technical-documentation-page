@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Technical Documentation Page</title>
+    <link rel="stylesheet" href="Technical Documentation Page Stylesheet.css">
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>jQuery Introductory Documentation</header>
+      <ul>
+        <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+        <li><a href="#How_to_Use" class="nav-link">How to Use</a></li>
+        <li><a href="#Syntax" class="nav-link">Syntax</a></li>
+        <li><a href="#Events" class="nav-link">Events</a></li>
+        <li><a href="#Get_and_Set" class="nav-link">Get and Set</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header class="main-section-header">
+          Introduction
+        </header>
+        <p>jQuery is a JavaScript library.</p>
+        <p>It is designed to: 
+          <ul>
+            <li>facilitate navigating a document</li>
+            <li>selecting DOM elements</li>
+            <li>event handling</li>
+            <li>creating animations</li>
+            <li>developing Ajax applications, etc.</li>
+          </ul>
+         </p>
+      </section>
+      <section class="main-section" id="How_to_Use">
+        <header class="main-section-header">
+          How to Use
+        </header>
+        <p>jQuery can be downloaded from 
+          <a href="http://jquery.com/download/">jQuery.com</a>.
+        </p>
+        <p>You should reference it with a
+          <code>&lt;script&gt;</code> tag inside the <code>&lt;head&gt;</code> section of your document.
+        </p>
+        <pre>
+          <code class="code-example">
+ &lt;head&gt;
+   &lt;script src="jquery-3.4.0.min.js"&gt;&lt;/script&gt;
+ &lt;/head&gt;
+          </code>
+         </pre>
+      </section>
+      <section class="main-section" id="Syntax">
+        <header class="main-section-header">
+          Syntax
+        </header>
+        <p>jQuery syntax is tailored for selecting (querying) HTML elements and performing some action on them.</p>
+        <p>The basic syntax is:
+          <code>$(selector).action()</code>
+        </p>
+        <p>Here is an example:</p>
+        <pre>
+          <code class="code-example">
+ &lt;div id="hello"&gt;
+   &lt;p&gt;Hi there!&lt;/p&gt;
+ &lt;/div&gt;
+        
+ $(function() {
+   $("#hello").text("Hello World!");
+ });
+          </code>
+         </pre>
+      </section>
+      <section class="main-section" id="Events">
+        <header class="main-section-header">
+          Events
+        </header>
+        <p>One common example of a jQuery event method is <code>$(document).ready()</code></p>
+        <p>It is used to execute a function when the document is fully loaded.</p>
+        <p>Here are some more useful examples of event handler methods:</p>
+        <p>Hiding an element fired by a click event:</p>
+        <pre>
+        <code class="code-example">
+ $("p").click(function(){
+   $(this).hide();
+ });
+        </code>
+        </pre>
+        <p>This method attaches an event handler function to a form field. The function is executed when the field loses focus:</p>
+        <pre>
+        <code class="code-example">
+ $("input").blur(function(){
+   $(this).css("background-color", "#ffffff");
+ });
+        </code>
+        </pre>
+      </section>
+      <section class="main-section" id="Get_and_Set">
+        <header class="main-section-header">
+          Get and Set
+        </header>
+        <p>There are three useful jQuery methods for DOM manipulation: <code>text()</code>, <code>html()</code>, and <code>val()</code>.</p>
+      <p>Another method, <code>attr()</code>, is used to get attribute values. It also allows you to set multiple attributes at the same time.</p>         
+      <p>For more information about these methods, please refer to the official documentation.</p>
+      </section>
+    </main>
+  </body>
+</html>
